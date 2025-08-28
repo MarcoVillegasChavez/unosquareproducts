@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "1d172db6-253a-43df-bc1e-1c882f1001ec",
+		"name": "UnosquareProducts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6548904"
+	},
+	"item": [
+		{
+			"name": "WeatherForecast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5262/WeatherForecast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5262",
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"tonystark001988@gmail.com\",\r\n    \"password\": \"Asd12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/Token/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"Token",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b255c3RhcmswMDE5ODhAZ21haWwuY29tIiwianRpIjoiZTg0ZmZkNTItOTgwZi00Y2Y5LTgxMDYtNTllOTMwMWMxNmYyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIzOWE1YWJhNS1mMmQ0LTQ4YjgtYmE1ZS02YjU0NWJmM2QzYWIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidG9ueXN0YXJrMDAxOTg4QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzdWFyaW8gQVBJIiwibmJmIjoxNzU2MzUzNjc5LCJleHAiOjE3NTY5NTg0NzksImlzcyI6IlVub3NxdWFyZVByb2R1Y3RzIiwiYXVkIjoiVXN1YXJpb1Vub3NxdWFyZVByb2R1Y3RzIn0.oP4uc17JsYBqgkHFYSAlIPs1g9UpeC2VU-n7YrqiBG4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/Products/7?from=0&limit=1000",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"Products",
+						"7"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5262"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+.vs/
+src/UnoSquareProducts.API/bin/
+src/UnoSquareProducts.API/obj/
+src/UnoSquareProducts.Application/bin/
+src/UnoSquareProducts.Application/obj/
+src/UnoSquareProducts.Common/bin/
+src/UnoSquareProducts.Common/obj/
+src/UnoSquareProducts.Domain/bin/
+src/UnoSquareProducts.Domain/obj/
+src/UnoSquareProducts.Infrastructure/
